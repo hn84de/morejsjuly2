@@ -1,18 +1,20 @@
 var els = [];
 var ind = 0;
 
-function createEle(vis = 0) {
-  els.push(document.createElement("a"));
+function createEle() {
+  var el = doucment.createElement("a");
+  var elStyle = el.style;
+  var docBody = document.body;
+  
+  els.push(el);
   ++ind;
-  document.body.appendChild(els[ind - 1]);
-  els[ind - 1].style.top = "0px";
-  els[ind - 1].style.left = "0px";
-  els[ind - 1].style.width = "0px";
-  els[ind - 1].style.height = "0px";
-  if (vis == 0) {
-    els[ind - 1].style.visibility = "hidden";
-  } else {
-    els[ind - 1].style.visibility = "visible";
-  }
-  return ind;
+  
+  docBody.appendChild(el);
+  elStyle.top = "0px";
+  elStyle.left = "0px";
+  elStyle.width = "0px";
+  elStyle.height = "0px";
+  elStyle.color = "blue";
+  
+  return 0;
 }
